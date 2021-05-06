@@ -76,6 +76,8 @@ namespace WepAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ConfigureCustomExceptionMiddleware();
             
             //  frontend için izin verme iþlemini yaptýk.
             app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
